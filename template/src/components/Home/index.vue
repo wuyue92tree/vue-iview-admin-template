@@ -44,11 +44,11 @@
             <MenuItem name="4" style="text-align: right; width: 200px;">
               <Dropdown style="text-align: left;">
                 <a href="javascript:void(0)" v-if="nickname" style="color: white">
-                  {{ nickname }}
+                  Test
                   <Icon type="md-arrow-dropdown" />
                 </a>
                 <a href="javascript:void(0)" v-else style="color:white;">
-                  {{ username }}
+                  Test
                   <Icon type="md-arrow-dropdown" />
                 </a>
                 <DropdownMenu slot="list">
@@ -92,15 +92,8 @@
             </Submenu>
           </Menu>
         </Sider>
-        <Layout :style="{padding: '0 24px 24px'}">
-          <Breadcrumb :style="{margin: '24px 0'}">
-            <BreadcrumbItem>Home</BreadcrumbItem>
-            <BreadcrumbItem>Components</BreadcrumbItem>
-            <BreadcrumbItem>Layout</BreadcrumbItem>
-          </Breadcrumb>
-          <Content :style=contentStyle>
-            <router-view />
-          </Content>
+        <Layout :style=contentStyle>
+          <router-view />
         </Layout>
       </Layout>
     </Layout>
@@ -110,10 +103,10 @@
 export default {
   data () {
     return {
-      username: 'test',
-      nickname: '测试ffffffff',
+      username: '',
+      nickname: '',
       is_staff: false,
-      contentStyle: 'margin: 10px; background: #fff; minHeight: ' + window.screen.height + 'px;'
+      contentStyle: 'padding: 0 24px 24px; minHeight: ' + window.screen.height + 'px;'
     }
   },
   methods: {

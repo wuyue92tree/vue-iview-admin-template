@@ -90,11 +90,11 @@
             <div style="padding-right: 25px; float: right;">
               <Dropdown>
                 <a href="javascript:void(0)" v-if="nickname">
-                  {{ nickname }}
+                  Test
                   <Icon type="arrow-down-b"></Icon>
                 </a>
                 <a href="javascript:void(0)" v-else>
-                  {{ username }}
+                  Test
                   <Icon type="arrow-down-b"></Icon>
                 </a>
                 <DropdownMenu slot="list">
@@ -121,8 +121,8 @@
 export default {
   data () {
     return {
-      nickname: 'Admin',
-      username: 'Admin',
+      nickname: '',
+      username: '',
       is_staff: false,
       isCollapsed: false,
       contentStyle: 'margin: 10px; background: #fff; minHeight: ' + window.screen.height + 'px;'
